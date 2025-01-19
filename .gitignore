@@ -1,0 +1,17 @@
+target/
+.settings/
+.springBeans
+bin/
+.idea
+.idea/
+*.iml
+build/
+out/
+.DS_Store
+.zsh_history
+
+
+# Lab environment-related
+lab/mysql/data
+lab/mysql/logs
+lab/redis/redis-data
