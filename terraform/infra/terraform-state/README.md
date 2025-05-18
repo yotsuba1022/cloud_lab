@@ -54,3 +54,4 @@ terraform destroy -var-file="common.tfvars"
 1. Resources created by this module are for Terraform state storage only
 2. Ensure using the correct AWS profile
 3. It's recommended not to set `prevent_destroy` in development environments
+4. [Please refer to here for more details.](../../notes/about_terraform_state.md)
