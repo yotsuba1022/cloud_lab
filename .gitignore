@@ -15,3 +15,14 @@ out/
 lab/mysql/data
 lab/mysql/logs
 lab/redis/redis-data
+
+
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+*.tfplan
+.terraform.lock.hcl
+
+*.tfvars
+!common.tfvars
