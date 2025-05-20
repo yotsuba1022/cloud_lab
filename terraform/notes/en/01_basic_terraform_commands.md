@@ -1,4 +1,6 @@
-# About Terraform
+# Basic Terraform Commands
+
+[English](01_basic_terraform_commands.md) | [繁體中文](../zh-tw/01_basic_terraform_commands.md) | [日本語](../ja/01_basic_terraform_commands.md) | [Back to Index](../README.md)
 
 ### Commands
 #### init
@@ -24,6 +26,7 @@ $ terraform apply
 ```bash
 $ terraform destroy
 ```
+Destroy command will remove all resources managed by the current Terraform configuration. It's essentially running a plan that targets the removal of everything. Terraform will show a deletion plan and ask for confirmation before proceeding, similar to the apply command. Use this with caution, especially in production environments.
 
 #### General process
 `init` -> `plan` -> `apply` -> `destroy`(optional)
