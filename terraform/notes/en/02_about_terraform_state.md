@@ -1,5 +1,7 @@
 # About Terraform State
 
+[English](02_about_terraform_state.md) | [繁體中文](../zh-tw/02_about_terraform_state.md) | [日本語](../ja/02_about_terraform_state.md) | [Back to Index](../README.md)
+
 ## Sensitive Information Handling
 
 - ARNs, IDs, and other sensitive information should not appear in `.tf` or `.hcl` files

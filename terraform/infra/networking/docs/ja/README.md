@@ -1,6 +1,6 @@
 # ネットワークインフラストラクチャ設計
 
-[English](../en/README.md) | [繁體中文](../zh-tw/README.md) | [日本語](README.md)
+[English](../en/README.md) | [繁體中文](../zh-tw/README.md) | [日本語](README.md) | [索引に戻る](../README.md)
 
 ### ネットワークアーキテクチャ図
 ```

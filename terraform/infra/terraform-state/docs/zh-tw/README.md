@@ -1,6 +1,6 @@
 # Terraform 狀態管理
 
-[English](../en/README.md) | [繁體中文](README.md) | [日本語](../ja/README.md)
+[English](../en/README.md) | [繁體中文](README.md) | [日本語](../ja/README.md) | [回到索引](../README.md)
 
 此模組用於創建和管理遠端 Terraform 狀態存儲。它創建：
 - 用於存儲 Terraform 狀態文件的 S3 儲存桶

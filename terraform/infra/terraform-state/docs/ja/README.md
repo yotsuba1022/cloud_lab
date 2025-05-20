@@ -1,6 +1,6 @@
 # Terraform 状態管理
 
-[English](../en/README.md) | [繁體中文](../zh-tw/README.md) | [日本語](README.md)
+[English](../en/README.md) | [繁體中文](../zh-tw/README.md) | [日本語](README.md) | [索引に戻る](../README.md)
 
 このモジュールはリモート Terraform 状態ストレージを作成および管理するために使用されます。以下を作成します：
 - Terraform 状態ファイルを保存するための S3 バケット
