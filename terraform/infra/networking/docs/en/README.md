@@ -1,14 +1,6 @@
 # Infra Network Design
 
-This directory contains network infrastructure setup for the project.
-
-## Documentation
-
-Documentation is available in the following languages:
-
-- [English](docs/en/README.md)
-- [繁體中文](docs/zh-tw/README.md)
-- [日本語](docs/ja/README.md)
+[English](README.md) | [繁體中文](../zh-tw/README.md) | [日本語](../ja/README.md)
 
 ### Network Architecture Diagram
 ```
