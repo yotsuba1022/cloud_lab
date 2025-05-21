@@ -30,9 +30,28 @@ resource "aws_network_acl" "private" {
   vpc_id     = aws_vpc.this.id
   subnet_ids = aws_subnet.private[*].id
 
+# allow ephemeral ports response（1024–65535）
+  ingress {
+    protocol   = "6" # TCP
+    rule_no    = 80
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
+    from_port  = 1024
+    to_port    = 65535
+  }
+
+  ingress {
+    protocol   = "-1"  # all protocols
+  rule_no    = 90
+  action     = "allow"
+  cidr_block = "0.0.0.0/0"
+  from_port  = 0
+  to_port    = 0
+}
+
   # allow inbound traffic from VPC
   ingress {
-    protocol   = "-1"
+    protocol   = "-1" # all protocols
     rule_no    = 100
     action     = "allow"
     cidr_block = var.vpc_cidr
@@ -42,7 +61,7 @@ resource "aws_network_acl" "private" {
 
   # allow all outbound traffic
   egress {
-    protocol   = "-1"
+    protocol   = "-1" # all protocols
     rule_no    = 100
     action     = "allow"
     cidr_block = "0.0.0.0/0"
