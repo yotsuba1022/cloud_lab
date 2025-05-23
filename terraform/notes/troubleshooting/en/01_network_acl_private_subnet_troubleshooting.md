@@ -1,5 +1,9 @@
 # Network ACL Impact on Private Subnet Communication - Debugging Experience
 
+[English](01_network_acl_private_subnet_troubleshooting.md) | [繁體中文](../zh-tw/01_network_acl_private_subnet_troubleshooting.md) | [日本語](../ja/01_network_acl_private_subnet_troubleshooting.md) | [Back to Index](../README.md)
+
+---
+
 ## Context
 - Experiment Date: 2025/05/21
 - Difficulty: 🤬🤬🤬

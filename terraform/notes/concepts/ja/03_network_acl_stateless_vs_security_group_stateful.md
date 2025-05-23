@@ -1,5 +1,9 @@
 # Network ACL（ステートレス）vs Security Group（ステートフル）深掘り解析
 
+[English](../en/03_network_acl_stateless_vs_security_group_stateful.md) | [繁體中文](../zh-tw/03_network_acl_stateless_vs_security_group_stateful.md) | [日本語](03_network_acl_stateless_vs_security_group_stateful.md) | [索引に戻る](../README.md)
+
+---
+
 ## 核心概念の違い
 
 ### ステートレス（無状態）- Network ACL

@@ -1,5 +1,9 @@
 # Network ACLがPrivate Subnet通信に与える影響のデバッグ経験
 
+[English](../en/01_network_acl_private_subnet_troubleshooting.md) | [繁體中文](../zh-tw/01_network_acl_private_subnet_troubleshooting.md) | [日本語](01_network_acl_private_subnet_troubleshooting.md) | [索引に戻る](../README.md)
+
+---
+
 ## 背景
 - 実験日時: 2025/05/21
 - 難易度: 🤬🤬🤬

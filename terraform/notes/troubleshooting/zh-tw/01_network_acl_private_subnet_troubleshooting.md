@@ -1,5 +1,9 @@
 # Network ACL 對 Private Subnet 通信影響的除錯經驗
 
+[English](../en/01_network_acl_private_subnet_troubleshooting.md) | [繁體中文](01_network_acl_private_subnet_troubleshooting.md) | [日本語](../ja/01_network_acl_private_subnet_troubleshooting.md) | [返回索引](../README.md)
+
+---
+
 ## 背景
 - 實驗日期: 2025/05/21
 - 難度：🤬🤬🤬
