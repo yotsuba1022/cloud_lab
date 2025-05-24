@@ -22,6 +22,12 @@ If the plan meet our expectation, which means all the .tf files are good to go, 
 $ terraform apply
 ```
 
+#### output
+
+```bash
+$ terraform output
+```
+
 #### destroy
 ```bash
 $ terraform destroy
