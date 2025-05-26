@@ -1,17 +1,28 @@
+variable "env" {
+  description = "Prefix for environment names"
+  type        = string
+}
+
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "ap-northeast-1"
+}
+
+variable "project" {
+  description = "Project name"
+  type        = string
+  default     = "nebuletta"
 }
 
 variable "module_name" {
-  description = "Project name"
+  description = "Module name"
   type        = string
 }
 
-variable "environment" {
-  description = "Environment name"
+variable "managed_by" {
+  description = "Managed by"
   type        = string
+  default     = "Terraform"
 }
 
 variable "instance_type" {

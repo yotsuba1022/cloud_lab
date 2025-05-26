@@ -26,3 +26,7 @@ crash.log
 
 *.tfvars
 !common.tfvars
+
+# Terramate generated files
+**/_terramate_generated*.tf
+**/required_providers.tm.gen.tf

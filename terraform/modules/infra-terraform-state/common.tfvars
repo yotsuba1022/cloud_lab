@@ -1,0 +1,5 @@
+env         = "dev"
+aws_region  = "ap-northeast-1"
+project     = "nebuletta"
+module_name = "infra-terraform-state"
+mamaged_by  = "Terraform"
