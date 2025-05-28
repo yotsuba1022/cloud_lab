@@ -46,10 +46,10 @@ terraform destroy -var-file="common.tfvars"
 
 | Output Name | Description |
 |------------|-------------|
-| s3_bucket_name | S3 bucket name |
-| s3_bucket_arn | S3 bucket ARN |
-| dynamodb_table_name | DynamoDB table name |
-| dynamodb_table_arn | DynamoDB table ARN |
+| storage_name | S3 bucket name |
+| storage_arn | S3 bucket ARN |
+| lock_table_name | DynamoDB table name |
+| lock_table_arn | DynamoDB table ARN |
 
 ## Notes
 

@@ -24,7 +24,7 @@
 
 ### ❌ Shared Terraform State Between infra-network and isolated-ec2
 
-📁 terraform-state/
+📁 state-storage/
 └── dev-backend.hcl     --> Shared backend config
 
 📁 infra-network/
@@ -57,7 +57,7 @@
 
 ### ✅ Separate Terraform State for infra-network and isolated-ec2
 
-📁 terraform-state/
+📁 state-storage/
 ├── dev-infra.hcl       --> For infra-network
 └── dev-ec2.hcl         --> For isolated-ec2
 

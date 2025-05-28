@@ -6,7 +6,7 @@
 ---
 
 - infra
-  1. terraform-state
+  1. state-storage
   2. networking
   
 ---

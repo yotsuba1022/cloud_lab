@@ -23,6 +23,7 @@ resource "aws_flow_log" "vpc_flow_log" {
 resource "null_resource" "delete_flow_log" {
   triggers = {
     prefix = local.prefix
+    region = var.aws_region
   }
 
   depends_on = [aws_flow_log.vpc_flow_log]
@@ -34,20 +35,20 @@ resource "null_resource" "delete_flow_log" {
       sleep 10
 
       # Check if VPC Flow Log still exists
-      FLOW_LOG_ID=$(aws ec2 describe-flow-logs --region ap-northeast-1 --query "FlowLogs[?LogGroupName=='/aws/${self.triggers.prefix}/vpc/flow-logs'].FlowLogId" --output text)
+      FLOW_LOG_ID=$(aws ec2 describe-flow-logs --region ${self.triggers.region} --query "FlowLogs[?LogGroupName=='/aws/${self.triggers.prefix}/vpc/flow-logs'].FlowLogId" --output text)
       
       if [ ! -z "$FLOW_LOG_ID" ]; then
         echo "VPC Flow Log still exists, deleting manually..."
-        aws ec2 delete-flow-logs --flow-log-ids $FLOW_LOG_ID --region ap-northeast-1
+        aws ec2 delete-flow-logs --flow-log-ids $FLOW_LOG_ID --region ${self.triggers.region}
       else
         echo "VPC Flow Log already deleted."
       fi
 
       # Check if CloudWatch Log Group still exists
       LOG_GROUP_NAME="/aws/${self.triggers.prefix}/vpc/flow-logs"
-      if aws logs describe-log-groups --log-group-name-prefix "$LOG_GROUP_NAME" --region ap-northeast-1 --query "logGroups[?logGroupName=='$LOG_GROUP_NAME']" --output text | grep -q "$LOG_GROUP_NAME"; then
+      if aws logs describe-log-groups --log-group-name-prefix "$LOG_GROUP_NAME" --region ${self.triggers.region} --query "logGroups[?logGroupName=='$LOG_GROUP_NAME']" --output text | grep -q "$LOG_GROUP_NAME"; then
         echo "CloudWatch Log Group still exists, deleting manually..."
-        aws logs delete-log-group --log-group-name "$LOG_GROUP_NAME" --region ap-northeast-1
+        aws logs delete-log-group --log-group-name "$LOG_GROUP_NAME" --region ${self.triggers.region}
       else
         echo "CloudWatch Log Group already deleted."
       fi

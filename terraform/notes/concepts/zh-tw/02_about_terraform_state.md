@@ -31,7 +31,7 @@
 ### 使用 `-backend-config`：
 - 允許在初始化期間傳遞後端配置
 - 可用於為不同環境提供不同的後端設置
-- 例如：`terraform init -backend-config=../terraform-state/backend.hcl`
+- 例如：`terraform init -backend-config=../state-storage/backend.hcl`
 - 當您需要在多個模組中使用相同的後端配置時很有用
 
 ## 最佳實踐

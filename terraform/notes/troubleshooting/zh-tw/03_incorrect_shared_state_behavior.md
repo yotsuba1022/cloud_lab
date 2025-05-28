@@ -24,7 +24,7 @@
 ### ❌ infra-network 與 isolated-ec2 共用同一個 terraform state
 
 ```
-📁 terraform-state/
+📁 state-storage/
 └── dev-backend.hcl     --> 提供共用 backend
 
 📁 infra-network/
@@ -59,7 +59,7 @@
 ### ✅ infra-network 與 isolated-ec2 使用獨立的 terraform state
 
 ```
-📁 terraform-state/
+📁 state-storage/
 ├── dev-infra.hcl       --> 給 infra-network 用
 └── dev-ec2.hcl         --> 給 isolated-ec2 用
 

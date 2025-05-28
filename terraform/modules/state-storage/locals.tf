@@ -7,4 +7,4 @@ locals {
     Name        = "${local.prefix}"
     ManagedBy   = var.managed_by
   }
-} 
+}

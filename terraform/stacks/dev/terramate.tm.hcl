@@ -5,11 +5,11 @@ globals {
 }
 
 globals "backend" "s3" {
-  bucket = "dev-infra-terraform-state-s3"
+  bucket = "dev-state-storage-s3"
 }
 
 globals "backend" "dynamodb" {
-  table = "dev-infra-terraform-state-locks"
+  table = "dev-state-storage-locks"
 }
 
 generate_hcl "_terramate_generated_provider.tf" {

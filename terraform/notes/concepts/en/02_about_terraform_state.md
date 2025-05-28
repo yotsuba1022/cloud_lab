@@ -31,7 +31,7 @@
 ### Using `-backend-config`:
 - Allows passing backend configuration during initialization
 - Can be used to provide different backend settings for different environments
-- Example: `terraform init -backend-config=../terraform-state/backend.hcl`
+- Example: `terraform init -backend-config=../state-storage/backend.hcl`
 - Useful when you need to use the same backend configuration across multiple modules
 
 ## Best Practices

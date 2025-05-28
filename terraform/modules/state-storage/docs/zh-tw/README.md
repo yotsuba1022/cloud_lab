@@ -46,10 +46,10 @@ terraform destroy -var-file="common.tfvars"
 
 | 輸出名稱 | 描述 |
 |------------|-------------|
-| s3_bucket_name | S3 儲存桶名稱 |
-| s3_bucket_arn | S3 儲存桶 ARN |
-| dynamodb_table_name | DynamoDB 表格名稱 |
-| dynamodb_table_arn | DynamoDB 表格 ARN |
+| storage_name | S3 儲存桶名稱 |
+| storage_arn | S3 儲存桶 ARN |
+| lock_table_name | DynamoDB 表格名稱 |
+| lock_table_arn | DynamoDB 表格 ARN |
 
 ## 注意事項
 

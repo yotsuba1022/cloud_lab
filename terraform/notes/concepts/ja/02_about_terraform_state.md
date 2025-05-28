@@ -31,7 +31,7 @@
 ### `-backend-config` の使用：
 - 初期化中にバックエンド構成を渡すことができます
 - 異なる環境に異なるバックエンド設定を提供するために使用できます
-- 例：`terraform init -backend-config=../terraform-state/backend.hcl`
+- 例：`terraform init -backend-config=../state-storage/backend.hcl`
 - 複数のモジュールで同じバックエンド構成を使用する必要がある場合に役立ちます
 
 ## ベストプラクティス

@@ -24,7 +24,7 @@
 
 ### ❌ infra-network と isolated-ec2 が同じ状態ファイルを共有している場合
 
-📁 terraform-state/
+📁 state-storage/
 └── dev-backend.hcl     --> 共通バックエンド設定
 
 📁 infra-network/
@@ -57,7 +57,7 @@
 
 ### ✅ infra-network と isolated-ec2 に個別の状態ファイルを割り当てる
 
-📁 terraform-state/
+📁 state-storage/
 ├── dev-infra.hcl       --> infra-network 用
 └── dev-ec2.hcl         --> isolated-ec2 用
 
