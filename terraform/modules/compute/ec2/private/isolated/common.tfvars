@@ -1,5 +1,5 @@
 aws_region  = "ap-northeast-1"
-module_name = "ec2-private-isolated" # need to classify the module name by functionality
+module_name = "isolated-ec2" # need to classify the module name by functionality
 environment = "dev"
 
 instance_type = "t3.micro"

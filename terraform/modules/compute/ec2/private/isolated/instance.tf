@@ -9,7 +9,7 @@ data "aws_ami" "amazon_linux" {
 }
 
 resource "aws_security_group" "ec2" {
-  name        = "${local.prefix}-ec2-sg"
+  name        = "${local.prefix}-sg"
   description = "Security group for EC2 instance"
   vpc_id      = data.terraform_remote_state.infra_networking.outputs.vpc_id
 
@@ -22,7 +22,7 @@ resource "aws_security_group" "ec2" {
   }
 
   tags = merge(
-    local.common_tags, { Name = "${local.prefix}-ec2-sg" }
+    local.common_tags, { Name = "${local.prefix}-sg" }
   )
 }
 
@@ -33,7 +33,7 @@ resource "aws_iam_role_policy_attachment" "ssm_managed_instance_core" {
 }
 
 resource "aws_iam_role" "ec2_role" {
-  name = "${local.prefix}-ec2-role"
+  name = "${local.prefix}-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -52,7 +52,7 @@ resource "aws_iam_role" "ec2_role" {
 }
 
 resource "aws_iam_instance_profile" "ec2_profile" {
-  name = "${local.prefix}-ec2-profile"
+  name = "${local.prefix}-profile"
   role = aws_iam_role.ec2_role.name
 }
 
@@ -74,7 +74,7 @@ resource "aws_instance" "this" {
   # Ensure the instance has appropriate tags to identify it in Session Manager
   tags = merge(
     local.common_tags, {
-      Name = "${local.prefix}-ec2",
+      Name = "${local.prefix}",
       # Add more tags to help organize and filter instances in Systems Manager
       SessionManager = "enabled"
     }
