@@ -1,0 +1,5 @@
+env         = "dev"
+module_name = "state-storage"
+managed_by  = "terraform"
+aws_region  = "ap-northeast-1"
+project     = "nebuletta"
