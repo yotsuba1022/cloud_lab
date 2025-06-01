@@ -2,7 +2,6 @@ stack {
   name        = "networking"
   description = "Networking of the infrastructure"
   id          = "4c124d0a-6fb2-450b-9f08-19cbd000335c"
-
   tags = [
     "dev",
     "infrastructure",

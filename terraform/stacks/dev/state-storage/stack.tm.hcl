@@ -2,7 +2,6 @@ stack {
   name        = "state-storage"
   description = "Terraform state storage"
   id          = "b6d8b5be-0e30-44cb-aead-4498bccb0d75"
-  
   tags = [
     "dev-state-storage"
   ]
