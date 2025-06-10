@@ -1,0 +1,5 @@
+env         = "dev"
+module_name = "s3"
+managed_by  = "terraform"
+aws_region  = "ap-northeast-1"
+project     = "nebuletta"
