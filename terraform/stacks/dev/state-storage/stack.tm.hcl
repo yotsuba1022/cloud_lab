@@ -37,5 +37,21 @@ generate_hcl "_terramate_generated_outputs.tf" {
     output "state_lock_table_arn" {
       value = module.state_storage.lock_table_arn
     }
+
+    output "kms_key_id" {
+      value = module.state_storage.kms_key_id
+    }
+
+    output "kms_key_arn" {
+      value = module.state_storage.kms_key_arn
+    }
+
+    output "kms_key_alias" {
+      value = module.state_storage.kms_key_alias
+    }
+
+    output "kms_key_policy" {
+      value = module.state_storage.kms_key_policy
+    }
   }
 }
