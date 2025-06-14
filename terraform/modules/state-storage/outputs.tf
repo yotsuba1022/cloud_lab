@@ -37,3 +37,27 @@ output "kms_key_policy" {
   description = "The policy of the KMS key used for encryption"
   value       = aws_kms_key_policy.state_storage_encryption.policy
 }
+
+output "default_vpc_id" {
+  description = "The ID of the default VPC"
+  value       = data.aws_vpc.default.id
+}
+
+output "default_security_group_id" {
+  description = "The ID of the default security group"
+  value       = data.aws_security_group.default.id
+}
+
+output "default_subnet_ids" {
+  description = "List of default subnet IDs"
+  value       = data.aws_subnets.default.ids
+}
+
+output "default_subnet_details" {
+  description = "Map of default subnet details"
+  value = { for k, v in data.aws_subnet.default : k => {
+    id                = v.id
+    availability_zone = v.availability_zone
+    cidr_block        = v.cidr_block
+  } }
+}
