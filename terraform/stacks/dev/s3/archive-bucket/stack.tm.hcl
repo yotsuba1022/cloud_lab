@@ -14,7 +14,7 @@ generate_hcl "_terramate_generated_backend.tf" {
     terraform {
       backend "s3" {
         bucket         = global.backend.s3.bucket
-        key            = "s3/archive-bucket/terraform.tfstate"
+        key            = "s3-archive-bucket/terraform.tfstate"
         region         = global.aws_region
         encrypt        = true
         dynamodb_table = global.backend.dynamodb.table

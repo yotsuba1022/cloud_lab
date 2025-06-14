@@ -53,21 +53,5 @@ generate_hcl "_terramate_generated_outputs.tf" {
     output "kms_key_policy" {
       value = module.state_storage.kms_key_policy
     }
-
-    output "default_vpc_id" {
-      value = module.state_storage.default_vpc_id
-    }
-
-    output "default_security_group_id" {
-      value = module.state_storage.default_security_group_id
-    }
-
-    output "default_subnet_ids" {
-      value = module.state_storage.default_subnet_ids
-    }
-
-    output "default_subnet_details" {
-      value = module.state_storage.default_subnet_details
-    }
   }
 }
