@@ -41,13 +41,17 @@ The project documentation is maintained in a separate repository, [click here to
     │   │       ├── service
     │   │       └── task
     │   ├── networking
+    │   ├── random-id-generator
     │   └── state-storage
     └── stacks
         └── dev
-            ├── compute
-            │   └── ec2
-            ├── networking
-            └── state-storage
+        │   ├── compute
+        │   │   └── ec2
+        │   │       ├── private
+        │   │       └── public
+        │   ├── networking
+        │   └── state-storage
+        └── random-id-generator
 ```
 
 In this project, Terramate stacks are defined under the `terraform/stacks` folder. For example, `dev`/`staging`/`production` folders represent dedicated stacks/environments that leverage the modules under the `terraform/modules` folder. 
@@ -62,6 +66,13 @@ Navigate to the project root and execute:
 terramate list
 ```
 This will show you the stacks that exist in this project.
+
+### Create a new stack
+Please adjust the path in the following command according to your current path:
+```shell
+terramate create path/to/stack
+```
+This will help to generate the `stack.tm.hcl` under the created stack folder.
 
 ### Generate .tf Files for Stacks
 Navigate to the project root and execute:
