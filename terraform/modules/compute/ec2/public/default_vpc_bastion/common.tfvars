@@ -1,9 +1,9 @@
-env           = "dev"
-aws_region    = "ap-northeast-1"
-project       = "nebuletta"
-module_name   = "default-vpc-bastion"
-managed_by    = "Terraform"
-instance_type = "t3.medium"
-ami_id        = "" # Use default Amazon Linux 2 AMI 
-default_vpc_id = ""
+env                       = "dev"
+aws_region                = "ap-northeast-1"
+project                   = "nebuletta"
+module_name               = "default-vpc-bastion"
+managed_by                = "Terraform"
+instance_type             = "t3.medium"
+ami_id                    = "" # Use default Amazon Linux 2 AMI 
+default_vpc_id            = ""
 default_public_subnet_ids = []
