@@ -32,7 +32,7 @@ resource "aws_kms_key_policy" "state_storage_encryption" {
         Resource = "*"
       },
       {
-        Sid    = "AllowFederatedUsers"
+        Sid    = "AllowSSOUserAccess"
         Effect = "Allow"
         Principal = {
           AWS = [
